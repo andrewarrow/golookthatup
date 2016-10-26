@@ -2,6 +2,7 @@ package client
 
 import "github.com/dontpanic92/wxGo/wx"
 import "os"
+import "fmt"
 
 func (f *TheFrame) evtThread(e wx.Event) {
 	te := wx.ToThreadEvent(e)
@@ -15,8 +16,6 @@ func (f *TheFrame) evtQuit(wx.Event) {
 	os.Exit(0)
 }
 
-func (f *TheFrame) evtLogin(wx.Event) {
-	go func() {
-		f.SendEvent(1)
-	}()
+func (f *TheFrame) evtTextChange(e wx.Event) {
+	fmt.Println(e)
 }
