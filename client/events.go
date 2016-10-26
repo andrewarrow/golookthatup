@@ -8,6 +8,7 @@ func (f *TheFrame) evtThread(e wx.Event) {
 	te := wx.ToThreadEvent(e)
 	switch {
 	case te.GetInt() == 1:
+		addRow(f)
 	case te.GetInt() == 2:
 	}
 }

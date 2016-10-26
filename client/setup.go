@@ -13,3 +13,9 @@ func setupStart(f *TheFrame) {
 	go f.checkQueryEvery()
 	f.frame.Layout()
 }
+
+func addRow(f *TheFrame) {
+	msg := wx.NewStaticText(f.frame, wx.ID_ANY, "username", wx.DefaultPosition, wx.DefaultSize, 0)
+	f.sizer.Add(msg, 0, wx.ALL|wx.EXPAND, 5)
+	f.frame.Layout()
+}
