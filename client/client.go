@@ -11,7 +11,7 @@ type TheFrame struct {
 
 func NewTheFrame() TheFrame {
 	f := TheFrame{}
-	f.frame = wx.NewFrame(wx.NullWindow, -1, "golookthatup")
+	f.frame = wx.NewFrame(wx.NullWindow, -1, "golookthatup", wx.DefaultPosition, wx.NewSize(900, 900))
 
 	menubar := wx.NewMenuBar()
 	menuFile := wx.NewMenu()
